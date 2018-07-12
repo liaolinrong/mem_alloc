@@ -1,6 +1,3 @@
-//use for alloc memory, 
-//usage: ./mem -n 500 -t 1000
-//       alloc 500M, every 1000 millisecond alloc 100M
 package main
 
 import (
@@ -14,7 +11,8 @@ const ONE_M = 1024*1024
 
 func main() {
         var num_m = flag.Int("n", 500, "alloc how many M")
-	var time_Millisecond = flag.Int("t", 1000, "sleep how many millisecond after alloc every 100M")
+	var time_Millisecond = flag.Int("t", 1000, "sleep how many milliseconds after alloc every 100M")
+	var time_delay = flag.Int("d", 3600, "sleep how many seconds after alloc all memory")
  	flag.Parse()
 
 	var p [MAX_M]*[ONE_M]byte
@@ -34,6 +32,7 @@ func main() {
 
         fmt.Printf("alloc %dM\n", i)
 
-	var b byte
-	fmt.Scanf("%c", &b)
+//	var b byte
+//	fmt.Scanf("%c", &b)
+	time.Sleep(time.Duration(*time_delay) * time.Second)
 }
