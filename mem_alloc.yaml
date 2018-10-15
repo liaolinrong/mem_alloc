@@ -13,7 +13,7 @@ spec:
     spec:
       containers:
       - name: centoscontainer
-        image: registry.hundsun.com/hcs/mem_alloc:1.0.0
+        image: registry.hundsun.com/hcs/mem_alloc:0.1
         command:
         - /mem_alloc
         - "-n"
