@@ -1,2 +1,2 @@
 # mem_alloc
-memory allocation tool for testing
+memory allocation tool for testing.
